@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Libre+Bodoni:wght@700&family=Orbitron:wght@700&family=Righteous&display=swap');
+;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-size: 100%;
+  /* background: linear-gradient(68.15deg, #ffeb00 85.61%, #0afef4 16.62%); */
+  background: linear-gradient(68deg, rgba(255,235,0,1) 65%, rgba(10,254,244,0.8519782913165266) 100%);
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 14px
+}
+.cabecalho-imagem {
+  height: 72px;
+}
+
+.cabecalho-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.cabecalho-menu-item {
+  font-family: 'ORbitron', sans-serif;
+  color: #1ce2dc;
+  font-weight: 400;
+  font-size: 20px
+}
+
+.conteudo {
+  margin-bottom: 50px;
+  border-top: 0.9px solid #1ce2dc;
+}
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.conteudo-principal-escrito-titulo {
+  font-family: 'Orbitron', cursive;
+  font-weight: 400;
+  font-size: 80px;
+  color: #1ce2db;
+}
+
+.conteudo-principal-escrito-subtitulo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #1ce2db;
+}
+
+.conteudo-principal-escrito-botao {
+  background-color: #20cfc9d3;
+  width: 280px;
+  height: 60px;
+  border: none;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #2F2325;
+}
+
+.conteudo-principal-escrito-botao:hover {
+  background-color: #1ce2dbe7;
+  color: #000000;
+}
+
+.conteudo-principal-imagem {
+  height: 380px;
+  display:flex;
+}
+
+.conteudo-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 48px;
+}
+
+.conteudo-secundario-titulo {
+  border-top: 0.4px solid #1ce2dbe7;
+  padding-top: 48px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 28px;
+  color: #1ce2dbe7;
+  margin-bottom: 16px;
+}
+
+.conteudo-secundario-paragrafo {
+  font-family: 'Righteous', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #17b9b493;
+}
+
+.rodape {
+    padding: 32px;
+    border-top: 0.4px solid #1ce2dc;
+}
+
+.rodape-imagem {
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}
