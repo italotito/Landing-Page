@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como usar o Bot do Discord</title>
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      line-height: 1.6;
+      padding: 0 1rem;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      display: block;
+      margin: 0.5rem 0;
+    }
+    .example {
+      background: #ecf0f1;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Guia Rápido: Usando o Bot no Discord</h1>
+
+  <h2>1. Convide o Bot para seu servidor</h2>
+  <p>Insira o link de convite do bot no seu navegador, escolha o servidor e permita as permissões necessárias.</p>
+  <ul>
+    <li>Abra: <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" target="_blank">Link de Convite</a></li>
+    <li>Selecione o servidor desejado</li>
+    <li>Clique em <strong>Autorizar</strong></li>
+  </ul>
+
+  <h2>2. Prefixo e comandos básicos</h2>
+  <p>O bot responde a comandos que começam com o prefixo padrão <code>/</code> Veja alguns exemplos:</p>
+  <div class="example">
+    <ul>
+      <li><code>/ping</code> – Verifica se o bot está online.</li>
+      <li><code>/help</code> – Exibe a lista de comandos disponíveis.</li>
+      <li><code>/play &lt;link ou nome da música&gt;</code> – Toca música no canal de voz.</li>
+    </ul>
+  </div>
+
+  <h2>3. Como usar na prática</h2>
+  <ol>
+    <li>Entre em um canal de texto.</li>
+    <li>Digite um comando, por exemplo <code>/ping</code>.</li>
+    <li>Aguarde a resposta do bot no chat.</li>
+    <li>Para comandos de voz, entre em um canal de voz primeiro.</li>
+  </ol>
+
+  <h2>4. Resolução de problemas</h2>
+  <ul>
+    <li>O bot não responde? Verifique se ele tem permissão para ler mensagens e enviar mensagens.</li>
+    <li>Comandos de música travando? Confira se o bot tem permissão para conectar e falar no canal de voz.</li>
+    <li>Prefixo diferente? Confira no canal <code>#config-bot</code> se alguém alterou o prefixo padrão.</li>
+  </ul>
+
+  <footer>
+    <p>Precisa de mais ajuda? Entre em contato com o desenvolvedor ou consulte a documentação oficial do <a href="https://discord.js.org" target="_blank">discord.js</a>.</p>
+  </footer>
+
+</body>
+</html>
