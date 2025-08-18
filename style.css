@@ -6,40 +6,98 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+
 }
 
 body {
+  position: relative;
   font-size: 100%;
-  /* background: linear-gradient(68.15deg, #ffeb00 85.61%, #0afef4 16.62%); */
-  background: linear-gradient(68deg, rgba(255,235,0,1) 65%, rgba(10,254,244,0.8519782913165266) 100%);
+  min-height: 100vh;
+  width: 100vw;
+  background: url('https://italoarodrigues.wordpress.com/wp-content/uploads/2025/07/background2.png');
+  background-size: cover;
+  animation: lightning 4s ease-out infinite;
+}
+
+@keyframes lightning{
+    0%{
+        filter: brightness(1);
+    }
+    86%{
+        filter: brightness(1);
+    }
+    87.75%{
+        filter: brightness(1.8);
+    }
+    89.5%{
+        filter: brightness(1.3);
+    }
+    93%{
+        filter: brightness(3);
+    }
+    100%{
+        filter: brightness(1);
+    }
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Cobrir toda a tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://italoarodrigues.wordpress.com/wp-content/uploads/2025/07/rain.png');
+    animation: rain 0.2s linear infinite;
+    opacity: 0.2;
+    pointer-events: none; /* Não interfere nos cliques */
+    z-index: 9999; /* Fica acima do conteúdo */
+}
+
+@keyframes rain {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 .cabecalho {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  padding: 14px
+  justify-content: left;
+  padding: 10px;
+  
 }
-.cabecalho-imagem {
-  height: 72px;
-}
-
 .cabecalho-menu {
   display: flex;
   gap: 40px;
 }
 
 .cabecalho-menu-item {
-  font-family: 'ORbitron', sans-serif;
-  color: #1ce2dc;
-  font-weight: 400;
-  font-size: 20px
+  display: inline-block;
+  padding: 10px 24px;
+  margin: 0 8px;
+  color: #1ce2dbe7;
+  border-radius: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s, color 0.2s;
+}
+
+.cabecalho-menu-item:hover {
+  background: yellow;
+  color: fuchsia;
+  text-shadow: fuchsia -2px
 }
 
 .conteudo {
   margin-bottom: 50px;
-  border-top: 0.9px solid #1ce2dc;
+  border-top: 0.9px solid yellowgreen;
 }
 
 .conteudo-principal {
@@ -47,45 +105,32 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  
 }
 
 .conteudo-principal-escrito {
   display: flex;
   flex-direction: column;
   gap: 19px;
+  margin-left: 48px;
 }
 
 .conteudo-principal-escrito-titulo {
   font-family: 'Orbitron', cursive;
   font-weight: 400;
   font-size: 80px;
-  color: #1ce2db;
+  color: yellow;
+  
 }
 
 .conteudo-principal-escrito-subtitulo {
   font-family: 'Orbitron', sans-serif;
   font-weight: 400;
   font-size: 25px;
-  color: #1ce2db;
+  color: yellow;
 }
 
-.conteudo-principal-escrito-botao {
-  background-color: #20cfc9d3;
-  width: 280px;
-  height: 60px;
-  border: none;
-  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: #2F2325;
-}
 
-.conteudo-principal-escrito-botao:hover {
-  background-color: #1ce2dbe7;
-  color: #000000;
-}
 
 .conteudo-principal-imagem {
   height: 380px;
@@ -95,35 +140,109 @@ body {
 .conteudo-secundario {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  margin-top: 48px;
+  align-items: flex-start;
+  gap: 8px; 
+  margin-right: 60px;
+  position: relative;
 }
 
 .conteudo-secundario-titulo {
-  border-top: 0.4px solid #1ce2dbe7;
-  padding-top: 48px;
+  padding-top: 24px;
   font-family: 'Righteous', cursive;
   font-weight: 400;
-  font-size: 28px;
-  color: #1ce2dbe7;
-  margin-bottom: 16px;
+  font-size: 20px;
+  color: yellow;
+  margin-bottom: 8px;
+  position: static;
+  left: unset;
+  top: unset;
+  transform: none;
+  text-align: left;
+  margin-left: 32px;
+}
+
+.conteudo-secundario-titulo:hover {
+  color: yellow;
+  text-shadow: fuchsia -3px 0;
+  
+
 }
 
 .conteudo-secundario-paragrafo {
   font-family: 'Righteous', sans-serif;
   font-weight: 300;
-  font-size: 20px;
-  color: #17b9b493;
+  font-size: 16px;
+  color: yellowgreen;
+  display: block;
+  margin-bottom: 8px;
+  width: 400px;
+  text-align: left;
+  position: static;
+  left: unset;
+  top: unset;
+  margin-left: 32px;
 }
 
 .rodape {
-    padding: 32px;
-    border-top: 0.4px solid #1ce2dc;
+    margin-bottom: 0;
+    border-top: 0.9px;;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    padding: 20px 0;
+}
+.rodape-texto {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: yellowgreen;
+    text-align: left;
 }
 
-.rodape-imagem {
-  height: 48px;
-  display: block;
-  margin: 0 auto;
+@media (max-width: 900px) {
+  .conteudo-principal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .conteudo-principal-imagem {
+    height: 220px;
+    margin-bottom: 20px;
+  }
+
+  .conteudo-principal-escrito-titulo {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .conteudo-principal-escrito-subtitulo {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .conteudo-secundario-titulo{
+    border-top: 0.4px solid #1ce2dbe7;
+    padding-top: 48px;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 28px;
+    color: #1ce2dbe7;
+    margin-bottom: 16px;
+    
+  }
+  .conteudo-secundario-paragrafo {
+    position: static;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto 16px auto;
+    padding-top: 16px;
+  }
 }
+
+.trovao {
+    animation: lightning 4s ease-out infinite;
+}
+
