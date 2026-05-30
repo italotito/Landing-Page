@@ -344,7 +344,10 @@ button {
 
 .hero__content {
   flex: 1;
+  min-width: 450px;
   max-width: 600px;
+  position: relative;
+  z-index: 3;
 }
 
 .hero__badge {
@@ -516,13 +519,15 @@ button {
 .hero__image {
   flex: 0 0 auto;
   position: relative;
+  margin-right: clamp(-50px, -10vw, -150px);
+  z-index: 2;
 }
 
 .hero__mascot {
-  width: clamp(260px, 28vw, 420px);
+  width: clamp(400px, 60vw, 900px);
   height: auto;
-  filter: drop-shadow(0 0 40px rgba(var(--accent-rgb), 0.25)) drop-shadow(0 20px 60px rgba(0, 0, 0, 0.4));
-  animation: levitate 6s ease-in-out infinite;
+  border-radius: var(--radius-xl);
+  mix-blend-mode: screen; /* Useful if the video has a black background */
 }
 
 @keyframes levitate {
@@ -1330,29 +1335,7 @@ button {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* ====================================
-   LIGHTNING EFFECT (refined)
-   ==================================== */
-@keyframes lightning {
-  0%, 100% { opacity: 0; }
-  92% { opacity: 0; }
-  93% { opacity: 0.03; }
-  93.5% { opacity: 0; }
-  95% { opacity: 0.05; }
-  95.5% { opacity: 0; }
-}
 
-.lightning-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  pointer-events: none;
-  z-index: 9998;
-  animation: lightning 8s ease-out infinite;
-}
 
 /* ====================================
    RESPONSIVE — Tablet (≤ 900px)
@@ -1370,6 +1353,11 @@ button {
     max-width: 100%;
   }
 
+  .hero__content {
+    max-width: 100%;
+    min-width: 0;
+  }
+
   .hero__description {
     margin-left: auto;
     margin-right: auto;
@@ -1379,8 +1367,12 @@ button {
     justify-content: center;
   }
 
+  .hero__image {
+    margin-right: 0;
+  }
+
   .hero__mascot {
-    width: clamp(200px, 40vw, 320px);
+    width: clamp(300px, 70vw, 600px);
   }
 
   .features__grid {
@@ -1491,7 +1483,7 @@ button {
   }
 
   .hero__mascot {
-    width: 200px;
+    width: 320px;
   }
 
   .stats__grid {
