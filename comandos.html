@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lista completa de comandos do bot WX-2077 para Discord — Gerais, Música, Moderação e Diversão.">
+  <meta name="theme-color" content="#06060e">
+  <title>Comandos — WX-2077</title>
+  <link rel="icon" type="image/png" href="images/logonova.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Lightning overlay -->
+  <div class="lightning-overlay" aria-hidden="true"></div>
+  <div class="nav__overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <img src="images/logonova.png" alt="WX-2077 Logo" class="nav__logo-img">
+        <span class="nav__logo-text">WX-2077</span>
+      </a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="nav-menu">
+        <a href="index.html" class="nav__link">Início</a>
+        <a href="comandos.html" class="nav__link nav__link--active">Comandos</a>
+        <a href="tutorial.html" class="nav__link">Tutorial</a>
+        <a href="https://github.com/seu-repositorio" class="nav__link" target="_blank" rel="noopener">Open Source</a>
+        <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="nav__cta">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          Adicionar ao Discord
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-header__title reveal">Comandos</h1>
+      <p class="page-header__subtitle reveal">Todos os comandos disponíveis no WX-2077. Use o prefixo <code style="background:rgba(0,229,255,0.1);padding:2px 8px;border-radius:4px;color:var(--primary);font-family:monospace;">/</code> antes de cada comando.</p>
+    </div>
+  </section>
+
+  <!-- ===== COMMANDS ===== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <!-- Search -->
+      <div class="commands__search reveal">
+        <svg class="commands__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" class="commands__search-input" id="command-search" placeholder="Buscar comando..." autocomplete="off">
+      </div>
+
+      <!-- Tabs -->
+      <div class="commands__tabs reveal">
+        <button class="commands__tab commands__tab--active" data-filter="todos">Todos</button>
+        <button class="commands__tab" data-filter="geral">Gerais</button>
+        <button class="commands__tab" data-filter="musica">Música</button>
+        <button class="commands__tab" data-filter="moderacao">Moderação</button>
+        <button class="commands__tab" data-filter="diversao">Diversão</button>
+      </div>
+
+      <!-- Command Cards Grid -->
+      <div class="commands__grid">
+        <!-- GERAIS -->
+        <div class="command-card reveal" data-category="geral">
+          <span class="command-card__prefix command-card__prefix--geral">Geral</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/help</code></div>
+            <p class="command-card__desc">Exibe todos os comandos disponíveis.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="geral">
+          <span class="command-card__prefix command-card__prefix--geral">Geral</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/ping</code></div>
+            <p class="command-card__desc">Verifica se o bot está online e mostra a latência.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="geral">
+          <span class="command-card__prefix command-card__prefix--geral">Geral</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/avatar @usuário</code></div>
+            <p class="command-card__desc">Mostra o avatar de um usuário em tamanho completo.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="geral">
+          <span class="command-card__prefix command-card__prefix--geral">Geral</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/userinfo @usuário</code></div>
+            <p class="command-card__desc">Exibe informações detalhadas do perfil do usuário.</p>
+          </div>
+        </div>
+
+        <!-- MÚSICA -->
+        <div class="command-card reveal" data-category="musica">
+          <span class="command-card__prefix command-card__prefix--musica">Música</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/play &lt;link ou nome&gt;</code></div>
+            <p class="command-card__desc">Toca uma música no canal de voz.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="musica">
+          <span class="command-card__prefix command-card__prefix--musica">Música</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/pause</code></div>
+            <p class="command-card__desc">Pausa a reprodução atual.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="musica">
+          <span class="command-card__prefix command-card__prefix--musica">Música</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/stop</code></div>
+            <p class="command-card__desc">Para a música e limpa a fila de reprodução.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="musica">
+          <span class="command-card__prefix command-card__prefix--musica">Música</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/skip</code></div>
+            <p class="command-card__desc">Pula para a próxima faixa na fila.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="musica">
+          <span class="command-card__prefix command-card__prefix--musica">Música</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/queue</code></div>
+            <p class="command-card__desc">Lista todas as músicas na fila de reprodução.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="musica">
+          <span class="command-card__prefix command-card__prefix--musica">Música</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/volume &lt;0-100&gt;</code></div>
+            <p class="command-card__desc">Ajusta o volume da reprodução de música.</p>
+          </div>
+        </div>
+
+        <!-- MODERAÇÃO -->
+        <div class="command-card reveal" data-category="moderacao">
+          <span class="command-card__prefix command-card__prefix--moderacao">Moderação</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/kick @usuário [motivo]</code></div>
+            <p class="command-card__desc">Expulsa um usuário do servidor.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="moderacao">
+          <span class="command-card__prefix command-card__prefix--moderacao">Moderação</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/ban @usuário [motivo]</code></div>
+            <p class="command-card__desc">Bane permanentemente um usuário do servidor.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="moderacao">
+          <span class="command-card__prefix command-card__prefix--moderacao">Moderação</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/mute @usuário [tempo]</code></div>
+            <p class="command-card__desc">Silencia um usuário por tempo determinado.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="moderacao">
+          <span class="command-card__prefix command-card__prefix--moderacao">Moderação</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/unmute @usuário</code></div>
+            <p class="command-card__desc">Remove o silenciamento de um usuário.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="moderacao">
+          <span class="command-card__prefix command-card__prefix--moderacao">Moderação</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/warn @usuário [motivo]</code></div>
+            <p class="command-card__desc">Emite um aviso formal para o usuário.</p>
+          </div>
+        </div>
+
+        <!-- DIVERSÃO -->
+        <div class="command-card reveal" data-category="diversao">
+          <span class="command-card__prefix command-card__prefix--diversao">Diversão</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/meme</code></div>
+            <p class="command-card__desc">Envia um meme aleatório no chat.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="diversao">
+          <span class="command-card__prefix command-card__prefix--diversao">Diversão</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/joke</code></div>
+            <p class="command-card__desc">Conta uma piada aleatória.</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="diversao">
+          <span class="command-card__prefix command-card__prefix--diversao">Diversão</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/coinflip</code></div>
+            <p class="command-card__desc">Joga cara ou coroa — sorte ou azar?</p>
+          </div>
+        </div>
+
+        <div class="command-card reveal" data-category="diversao">
+          <span class="command-card__prefix command-card__prefix--diversao">Diversão</span>
+          <div class="command-card__body">
+            <div class="command-card__name"><code>/rps &lt;pedra|papel|tesoura&gt;</code></div>
+            <p class="command-card__desc">Desafie o bot para uma partida de pedra, papel ou tesoura.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title reveal">Gostou dos comandos?</h2>
+      <p class="cta-section__text reveal">Adicione o WX-2077 ao seu servidor agora mesmo e tenha acesso a todos esses comandos e muito mais.</p>
+      <div class="reveal">
+        <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="btn btn--primary">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          Adicionar ao Discord
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <img src="images/logonova.png" alt="WX-2077" class="footer__logo-img">
+          <p class="footer__desc">O Overlord dos Bots de Discord. Proteja e gerencie seu servidor com poder absoluto.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Páginas</h4>
+          <a href="index.html" class="footer__link">Início</a>
+          <a href="comandos.html" class="footer__link">Comandos</a>
+          <a href="tutorial.html" class="footer__link">Tutorial</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Comunidade</h4>
+          <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="footer__link" target="_blank" rel="noopener">Discord</a>
+          <a href="https://github.com/seu-repositorio" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 WX-2077. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

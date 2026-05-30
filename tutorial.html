@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tutorial completo para configurar e usar o bot WX-2077 no seu servidor Discord.">
+  <meta name="theme-color" content="#06060e">
+  <title>Tutorial — WX-2077</title>
+  <link rel="icon" type="image/png" href="images/logonova.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Lightning overlay -->
+  <div class="lightning-overlay" aria-hidden="true"></div>
+  <div class="nav__overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <img src="images/logonova.png" alt="WX-2077 Logo" class="nav__logo-img">
+        <span class="nav__logo-text">WX-2077</span>
+      </a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="nav-menu">
+        <a href="index.html" class="nav__link">Início</a>
+        <a href="comandos.html" class="nav__link">Comandos</a>
+        <a href="tutorial.html" class="nav__link nav__link--active">Tutorial</a>
+        <a href="https://github.com/seu-repositorio" class="nav__link" target="_blank" rel="noopener">Open Source</a>
+        <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="nav__cta">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          Adicionar ao Discord
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-header__title reveal">Tutorial</h1>
+      <p class="page-header__subtitle reveal">Guia completo para configurar e usar o WX-2077 no seu servidor Discord.</p>
+    </div>
+  </section>
+
+  <!-- ===== TUTORIAL STEPS ===== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag reveal">Passo a Passo</p>
+        <h2 class="section__title reveal">Configure em Minutos</h2>
+      </div>
+
+      <div class="tutorial__steps">
+        <!-- Step 1 -->
+        <div class="tutorial-step reveal">
+          <div class="tutorial-step__header">
+            <div class="tutorial-step__number">1</div>
+            <h3 class="tutorial-step__title">Convide o Bot para seu Servidor</h3>
+          </div>
+          <div class="tutorial-step__body">
+            <p>Insira o link de convite do bot no seu navegador, escolha o servidor e permita as permissões necessárias.</p>
+            <ul>
+              <li>Acesse o <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" target="_blank" rel="noopener">Link de Convite</a></li>
+              <li>Selecione o servidor desejado na lista</li>
+              <li>Clique em <strong>Autorizar</strong> e complete o captcha</li>
+            </ul>
+            <p>Após autorizar, o WX-2077 aparecerá na lista de membros do seu servidor como <strong>online</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="tutorial-step reveal">
+          <div class="tutorial-step__header">
+            <div class="tutorial-step__number">2</div>
+            <h3 class="tutorial-step__title">Conheça o Prefixo e Comandos Básicos</h3>
+          </div>
+          <div class="tutorial-step__body">
+            <p>O bot responde a comandos que começam com o prefixo <code>/</code> (slash commands). Veja alguns exemplos essenciais:</p>
+            <div class="tutorial__code-block">
+              <code>/ping</code>
+              <code>/help</code>
+              <code>/play &lt;link ou nome da música&gt;</code>
+            </div>
+            <p>Para ver a lista completa de comandos, visite a <a href="comandos.html">página de comandos</a> ou use <code>/help</code> diretamente no Discord.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="tutorial-step reveal">
+          <div class="tutorial-step__header">
+            <div class="tutorial-step__number">3</div>
+            <h3 class="tutorial-step__title">Como Usar na Prática</h3>
+          </div>
+          <div class="tutorial-step__body">
+            <ol>
+              <li>Entre em um <strong>canal de texto</strong> do seu servidor</li>
+              <li>Digite um comando, por exemplo <code>/ping</code></li>
+              <li>Aguarde a resposta do bot no chat</li>
+              <li>Para comandos de <strong>música</strong>, entre primeiro em um canal de voz e depois use <code>/play</code></li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="tutorial-step reveal">
+          <div class="tutorial-step__header">
+            <div class="tutorial-step__number">4</div>
+            <h3 class="tutorial-step__title">Permissões Importantes</h3>
+          </div>
+          <div class="tutorial-step__body">
+            <p>Para que o WX-2077 funcione corretamente, certifique-se de que ele tenha as seguintes permissões:</p>
+            <ul>
+              <li><strong>Ler e Enviar Mensagens</strong> — para responder aos comandos</li>
+              <li><strong>Gerenciar Membros</strong> — para kick, ban e mute</li>
+              <li><strong>Conectar e Falar</strong> — para comandos de música em canais de voz</li>
+              <li><strong>Gerenciar Mensagens</strong> — para o sistema de auto-moderação</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag reveal">Dúvidas Frequentes</p>
+        <h2 class="section__title reveal">Resolução de Problemas</h2>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion__item reveal">
+          <button class="accordion__trigger">
+            O bot não responde aos meus comandos
+            <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__body">
+              Verifique se o bot tem permissão para <strong>ler mensagens</strong> e <strong>enviar mensagens</strong> no canal onde você está usando os comandos. Também confirme que o bot está online na lista de membros do servidor. Se o problema persistir, tente remover e reconvidar o bot.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item reveal">
+          <button class="accordion__trigger">
+            Os comandos de música não funcionam
+            <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__body">
+              Confira se o bot tem permissão para <strong>conectar</strong> e <strong>falar</strong> no canal de voz. Você precisa estar em um canal de voz antes de usar o comando <code>/play</code>. Se o bot entrar no canal mas não tocar, verifique se o link da música é válido.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item reveal">
+          <button class="accordion__trigger">
+            O prefixo do bot mudou ou não funciona
+            <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__body">
+              O WX-2077 usa <strong>slash commands</strong> (comandos com <code>/</code>), que são nativos do Discord. Se os comandos com <code>/</code> não aparecem no auto-complete, tente atualizar o Discord ou reconvidar o bot com as permissões de <strong>Usar Comandos de Aplicativos</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item reveal">
+          <button class="accordion__trigger">
+            Como reportar um bug ou sugerir algo?
+            <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__body">
+              Você pode reportar bugs e sugerir novas funcionalidades abrindo uma <strong>issue</strong> no nosso <a href="https://github.com/seu-repositorio" target="_blank" rel="noopener">repositório GitHub</a>. Toda contribuição é bem-vinda! Você também pode entrar em contato pelo nosso servidor no Discord.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title reveal">Precisa de mais ajuda?</h2>
+      <p class="cta-section__text reveal">Consulte a documentação completa ou entre em contato com o desenvolvedor pelo Discord.</p>
+      <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="btn btn--primary">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          Entrar no Discord
+        </a>
+        <a href="comandos.html" class="btn btn--secondary">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Ver Comandos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <img src="images/logonova.png" alt="WX-2077" class="footer__logo-img">
+          <p class="footer__desc">O Overlord dos Bots de Discord. Proteja e gerencie seu servidor com poder absoluto.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Páginas</h4>
+          <a href="index.html" class="footer__link">Início</a>
+          <a href="comandos.html" class="footer__link">Comandos</a>
+          <a href="tutorial.html" class="footer__link">Tutorial</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Comunidade</h4>
+          <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="footer__link" target="_blank" rel="noopener">Discord</a>
+          <a href="https://github.com/seu-repositorio" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 WX-2077. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,49 +1,243 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Best bot ever!!!">
-       <title>WX-2077 Bot</title>
-       <link rel="stylesheet" type="text/css" href="style.css" >
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WX-2077 — O Overlord dos Bots de Discord. Proteja, modere e gerencie seu servidor com poder absoluto.">
+  <meta name="theme-color" content="#06060e">
+  <title>WX-2077 — O Overlord dos Bots</title>
+  <link rel="icon" type="image/png" href="images/logonova.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <img class="cabecalho" src="logo2.png" alt="Logo da Comunidade WX-2077">
-        <nav class="cabecalho-menu">
-            <a class="cabecalho-menu-item" href="https://discord.com/">Comunidade WX-2077</a>
-            <a class="cabecalho-menu-item">Tutorial</a>
-            <a class="cabecalho-menu-item">Open Source</a>
-            <a class="cabecalho-menu-item">Comandos</a>
-          </nav>
-    </header>
 
-    <main class="conteudo">
-        <section class="conteudo-principal">
-            <div class="conteudo-principal-escrito">
-                <h1 class="conteudo-principal-escrito-titulo">WX-2077</h1>
-                <h2 class="conteudo-principal-escrito-subtitulo">THE OVERLORD OF BOTS!!!</h2>
-                <button class="conteudo-principal-escrito-botao">FOLLOW YOUR MASTER!!!</button> 
-            </div>
-            <img src="WX-2077.png" alt="Imagem do WX-2077.png">
-        </section>
+  <!-- Lightning overlay (subtle) -->
+  <div class="lightning-overlay" aria-hidden="true"></div>
 
-        <section class="conteudo-secundario"> 
-            <h3 class="conteudo-secundario-titulo">WHAT MINIONS WILL DO FOR YOU!!!</h3>
-            <p class="conteudo-secundario-paragrafo">1. Creates a <strong>capcha verification system</strong> for new members to make sure they are not robots</p>
-            <p class="conteudo-secundario-paragrafo">2. It has an <strong>automatic banning system</strong> for suspicious links that are sent in the community</p>
-            <p class="conteudo-secundario-paragrafo">3. <strong>Manual warning and banning system</strong> for admin people to use</p>
-            
-        </section>
+  <!-- Mobile overlay -->
+  <div class="nav__overlay" id="nav-overlay" aria-hidden="true"></div>
 
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <img src="images/logonova.png" alt="WX-2077 Logo" class="nav__logo-img">
+        <span class="nav__logo-text">WX-2077</span>
+      </a>
 
-    </main>
+      <button class="nav__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
+      <nav class="nav__menu" id="nav-menu">
+        <a href="index.html" class="nav__link nav__link--active">Início</a>
+        <a href="comandos.html" class="nav__link">Comandos</a>
+        <a href="tutorial.html" class="nav__link">Tutorial</a>
+        <a href="https://github.com/seu-repositorio" class="nav__link" target="_blank" rel="noopener">Open Source</a>
+        <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="nav__cta" id="nav-cta">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          Adicionar ao Discord
+        </a>
+      </nav>
+    </div>
+  </header>
 
-    <footer class="rodape">
-        <img class="rodape-imagem" src="wxLOGO.png">
-    </footer>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="particles-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero__badge reveal">
+          <span class="hero__badge-dot"></span>
+          Online agora
+        </div>
+
+        <h1 class="hero__title reveal">
+          <span class="hero__title-accent">WX-2077</span>
+        </h1>
+
+        <p class="hero__subtitle reveal">
+          <span id="typing-text"></span><span class="hero__typing-cursor"></span>
+        </p>
+
+        <p class="hero__description reveal">
+          O bot definitivo para Discord. Proteja seu servidor com verificação captcha, bloqueie links maliciosos automaticamente e tenha controle total da moderação.
+        </p>
+
+        <div class="hero__buttons reveal">
+          <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="btn btn--primary" id="hero-cta">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+            Adicionar ao Discord
+          </a>
+          <a href="comandos.html" class="btn btn--secondary">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Ver Comandos
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__image reveal">
+        <img src="images/WX-Full.png" alt="WX-2077 Mascote" class="hero__mascot">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag reveal">Funcionalidades</p>
+        <h2 class="section__title reveal">O que o WX-2077 faz por você</h2>
+        <p class="section__subtitle reveal">Ferramentas poderosas para manter seu servidor seguro e organizado.</p>
+      </div>
+
+      <div class="features__grid">
+        <!-- Card 1: Captcha -->
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Verificação Captcha</h3>
+          <p class="feature-card__text">Sistema de verificação automática para novos membros. Garanta que apenas humanos reais entrem no seu servidor.</p>
+        </div>
+
+        <!-- Card 2: Auto-ban -->
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Bloqueio Automático</h3>
+          <p class="feature-card__text">Detecção e banimento automático de links suspeitos e maliciosos enviados na comunidade. Proteção em tempo real.</p>
+        </div>
+
+        <!-- Card 3: Moderation -->
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Moderação Completa</h3>
+          <p class="feature-card__text">Sistema de aviso e banimento manual para administradores. Controle total sobre quem pode ficar no servidor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag reveal">Primeiros Passos</p>
+        <h2 class="section__title reveal">Como Funciona</h2>
+        <p class="section__subtitle reveal">Configure o WX-2077 no seu servidor em menos de 2 minutos.</p>
+      </div>
+
+      <div class="steps__grid">
+        <div class="step reveal reveal-delay-1">
+          <div class="step__number">1</div>
+          <div class="step__content">
+            <h3 class="step__title">Convide o Bot</h3>
+            <p class="step__text">Clique em "Adicionar ao Discord", selecione seu servidor e autorize as permissões necessárias. É rápido e seguro.</p>
+          </div>
+        </div>
+
+        <div class="step reveal reveal-delay-2">
+          <div class="step__number">2</div>
+          <div class="step__content">
+            <h3 class="step__title">Configure os Comandos</h3>
+            <p class="step__text">Use o prefixo <code>/</code> para acessar os comandos. Digite <code>/help</code> para ver todas as opções disponíveis.</p>
+          </div>
+        </div>
+
+        <div class="step reveal reveal-delay-3">
+          <div class="step__number">3</div>
+          <div class="step__content">
+            <h3 class="step__title">Domine seu Servidor</h3>
+            <p class="step__text">Pronto! O WX-2077 já está protegendo seu servidor com verificação captcha, auto-moderação e muito mais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="section stats" id="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat reveal reveal-delay-1">
+          <div class="stat__number" data-count="100" data-suffix="+">0</div>
+          <div class="stat__label">Servidores Ativos</div>
+        </div>
+        <div class="stat reveal reveal-delay-2">
+          <div class="stat__number" data-count="20" data-suffix="+">0</div>
+          <div class="stat__label">Comandos Disponíveis</div>
+        </div>
+        <div class="stat reveal reveal-delay-3">
+          <div class="stat__number" data-count="24" data-suffix="/7">0</div>
+          <div class="stat__label">Online Sempre</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <h2 class="cta-section__title reveal">Pronto para dominar seu servidor?</h2>
+      <p class="cta-section__text reveal">Junte-se a centenas de comunidades que já usam o WX-2077 para proteger e gerenciar seus servidores.</p>
+      <div class="reveal">
+        <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="btn btn--primary" id="cta-btn">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          Comece Agora — É Grátis
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <img src="images/logonova.png" alt="WX-2077" class="footer__logo-img">
+          <p class="footer__desc">O Overlord dos Bots de Discord. Proteja e gerencie seu servidor com poder absoluto.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Páginas</h4>
+          <a href="index.html" class="footer__link">Início</a>
+          <a href="comandos.html" class="footer__link">Comandos</a>
+          <a href="tutorial.html" class="footer__link">Tutorial</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Comunidade</h4>
+          <a href="https://discord.com/oauth2/authorize?client_id=1154902622189400074" class="footer__link" target="_blank" rel="noopener">Discord</a>
+          <a href="https://github.com/seu-repositorio" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 WX-2077. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
